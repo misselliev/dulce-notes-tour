@@ -20,17 +20,3 @@ jobs:
           [ -f .eslintrc.json ] 
       - name: ESLint Report
         run: npx eslint .
-  prettier:
-    name: Prettier
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - name: Setup Prettier
-        run: |
-          npm i prettier eslint-config-prettier eslint-plugin-prettier --dev
-          [ -f .prettierrc.json ] 
-      - name: Prettier Report
-        run: npx stylelint "**/*.{css,scss}"
