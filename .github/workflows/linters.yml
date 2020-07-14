@@ -16,7 +16,7 @@ jobs:
           node-version: "12.x"
       - name: Setup ESLint
         run: |
-          npm i eslint@6.8.x @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react --dev
-          [ -f .eslintrc.json ] 
+          npm install --save-dev eslint@6.8.x @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react --dev
+          [ -f .eslintrc.js ] 
       - name: ESLint Report
         run: npx eslint .
