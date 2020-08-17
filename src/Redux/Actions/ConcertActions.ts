@@ -4,7 +4,7 @@ import { ConcertDispatchTypes, CONCERT_LOADING, CONCERT_SUCCESS, CONCERT_FAIL } 
 
 const client_id = process.env.REACT_APP_CLIENT_ID;
 const client_secret = process.env.REACT_APP_SECRET;
-export const getConcert = () => async (dispatch: Dispatch<ConcertDispatchTypes>) => {
+export const getConcerts = () => async (dispatch: Dispatch<ConcertDispatchTypes>) => {
     try {
         dispatch({
             type: CONCERT_LOADING,
